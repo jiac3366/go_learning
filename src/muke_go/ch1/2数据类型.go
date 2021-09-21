@@ -6,6 +6,7 @@ import (
 	"math/cmplx"
 )
 
+//go语言没有char类型 只有rune类型
 //复数 complex64实部和虚部是float32
 //complex128 实部和虚部是float64
 func euler() {
@@ -31,8 +32,8 @@ func force_switch_type_of_data() {
 	fmt.Println(c)
 }
 
+//常量类型
 func const_type() {
-
 	const (
 		filename = "abc.txt"
 		a, b     = 3, 4 //const数值可以作为各种类型使用 因为sqrt()内部需要float64
@@ -42,9 +43,32 @@ func const_type() {
 	fmt.Println(filename, c)
 }
 
+//
+func enumerate() {
+	const (
+		cpp = iota
+		java
+		python
+		golang
+	)
+	fmt.Println(cpp, java, python, golang)
+
+	const (
+		b  = 1 <<(10*iota) //iota = 0, 1, 2, 3 ...
+		kb
+		mb
+		g
+		tg
+	)
+	fmt.Println(b, kb, mb, g, tg)
+}
+
+
 
 func main() {
 	euler()
 	force_switch_type_of_data()
 	const_type()
+	enumerate()
+
 }

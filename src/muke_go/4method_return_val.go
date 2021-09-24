@@ -1,6 +1,6 @@
 package main
 
-
+import "fmt"
 //写法1
 func add(a int, b int) (int, int) {
 	return a + b, a - b
@@ -12,3 +12,4 @@ func add2(a int, b int) (sum int,  res int) {
 	res = a - b
 	return
 }
+
